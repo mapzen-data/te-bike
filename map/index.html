@@ -26,10 +26,9 @@
     var geocoder = L.control.geocoder('search-DqwJuRM').addTo(map);
     var layer = Tangram.leafletLayer({
       scene: 'https://raw.githubusercontent.com/tangrams/refill-style/gh-pages/refill-style.yaml',
-      attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | <a href="http://www.openstreetmap.org/about" target="_blank">&copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>',
+      attribution: '| <a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | <a href="http://www.openstreetmap.org/about" target="_blank">&copy; OSM contributors',
     });
     layer.addTo(map);
-    //map.setView([41.8758,-87.6189], 16);
     var control = L.Routing.control({
       waypoints: [
         L.latLng(44.948,-93.205),
