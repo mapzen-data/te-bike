@@ -51,22 +51,18 @@
 	    btn.innerHTML = label;
 	    return btn;
 	}
-
 	map.on('click', function(e) {
 	    var container = L.DomUtil.create('div'),
 	        startBtn = createButton('Starting Point', container),
 	        destBtn = createButton('Ending Point', container);
-
 	    L.DomEvent.on(startBtn, 'click', function() {
 	        control.spliceWaypoints(0, 1, e.latlng);
 	        map.closePopup();
 	    });
-
 	    L.DomEvent.on(destBtn, 'click', function() {
 	        control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
 	        map.closePopup();
 	    });    
-
 	    L.popup()
 	        .setContent(container)
 	        .setLatLng(e.latlng)
