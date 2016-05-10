@@ -43,6 +43,9 @@
       summaryTemplate:'<div class="start">{name}</div><div class="info {transitmode}">{distance}, {time}</div>',
       routeWhileDragging: true
     }).addTo(map);
+
+    L.Routing.errorControl(control).addTo(map);
+    
   </script>
   <script>
 		function createButton(label, container) {
